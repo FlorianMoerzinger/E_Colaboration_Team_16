@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Abstract}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Unterpunkt1}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Unterpunkt2}{1}{}%
+\contentsline {section}{\numberline {2}Einf\"uhrung}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Unterpunkt1}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Unterpunkt2}{2}{}%
+\contentsline {section}{\numberline {3}Methoden}{2}{}%
+\contentsline {subsection}{\numberline {3.1}Unterpunkt1}{2}{}%
+\contentsline {subsection}{\numberline {3.2}Unterpunkt2}{2}{}%
+\contentsline {section}{\numberline {4}Resultate}{2}{}%
+\contentsline {subsection}{\numberline {4.1}Unterpunkt1}{2}{}%
+\contentsline {subsection}{\numberline {4.2}Unterpunkt2}{3}{}%
+\contentsline {section}{\numberline {5}Diskussion}{3}{}%
+\contentsline {subsection}{\numberline {5.1}Unterpunkt1}{3}{}%
+\contentsline {subsection}{\numberline {5.2}Unterpunkt2}{3}{}%

@@ -1,0 +1,175 @@
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[tmargin=1in,bmargin=1in,lmargin=1.25in,rmargin=1.25in]{geometry}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage[overload]{textcase}
+
+\usepackage{exscale,relsize}
+\usepackage{fancyhdr}
+\usepackage[small]{caption}
+\usepackage{float}
+
+\usepackage{amsmath}
+\usepackage{wallpaper}
+\usepackage{pst-all}
+\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{makeidx}
+%\usepackage[pdftex,bookmarks=true,bookmarksnumbered=true]{hyperref}
+
+% equations
+
+
+
+\usepackage{amsxtra}
+\usepackage{xfrac}
+
+
+
+
+\newcommand{\babel}[2]{\ifthenelse{\boolean{english}}{#1}{#2}}
+
+% color set
+\definecolorseries{foo}{rgb}{last}[rgb]{1.0,0.0,0.0}[rgb]{0.0,0.0,1.0}
+\resetcolorseries[16]{foo}
+
+% auxillary symbols
+\renewcommand{\tilde}{\symbol{126}}
+\newcommand{\define}{\stackrel{!}{=}}
+\renewcommand{\equiv}{\,\widehat{=}\,}
+\newcommand{\subsubsubsection}{\textbf}
+\newcommand{\re}{\mathrm{Re}}
+\newcommand{\pr}{\mathrm{Pr}}
+\newcommand{\st}{\mathrm{St}}
+\newcommand{\fr}{\mathrm{Fr}}
+\newcommand{\nus}{\mathrm{Nu}}
+\newcommand{\gr}{\mathrm{Gr}}
+\newcommand{\ra}{\mathrm{Ra}}
+\newcommand{\mif}{\quad\mathrm{\babel{if}{falls}}\quad}
+\newcommand{\with}{\quad\mathrm{\babel{with}{mit}}\quad}
+\newcommand{\for}{\quad\mathrm{\babel{for}{f"ur}}\quad}
+%\renewcommand{\not}{\not}
+\newcommand{\im}{i}
+\newcommand{\ariwam}{ARiWaM}
+\newcommand{\matlab}{MATLAB}
+
+% format specifications
+\renewcommand{\emph}{\textbf}
+\newcommand{\file}{\textit}
+\newcommand{\cmd}{\texttt}
+\newcommand{\ten}{\boldsymbol}
+%\newcommand{\unit}{\mathrm}
+\newcommand{\lemma}{\textit}
+\newcommand{\deutsch}[1]{german: \textit{#1}}
+\renewcommand{\index}{\emph}
+
+% Command path to graphic files
+\newcommand{\gpath}{./grafics}
+\newcommand{\bsppath}{../uebungen/beispiele}
+
+% mathematical operators
+\newcommand{\grad}{\,\mathrm{grad}\,}
+\renewcommand{\div}{\,\mathrm{div}\,}
+\newcommand{\rot}{\,\mathrm{rot}\,}
+\newcommand{\lap}{\Delta}
+\newcommand{\laplace}[1]{\mathscr{L}\left\{#1\right\}}
+\newcommand{\trans}{^T}
+\newcommand{\norm}{\psarc[linewidth=0.5pt](0,0){0.4}{0}{90}\psdot[dotsize=0.1](0.15,0.15)}
+
+%\renewcommand{\labelenumi}{\alph{enumi})}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1.5ex plus0.5ex minus0.5ex}
+\setlength{\captionmargin}{3em}
+
+% counters
+\newcounter{example}
+\ifthenelse{\boolean{english}}{\newcommand{\exampletext}{example }}{\newcommand{\exampletext}{Beispiel }}
+\newcommand{\example}[1]{\underline{\exampletext \arabic{chapter}.\arabic{example}:} #1 \addtocounter{example}{1}}
+\newcounter{exercise}
+\ifthenelse{\boolean{english}}{\newcommand{\exercisetext}{exercise }}{\newcommand{\exercisetext}{Aufgabe }}
+\newcommand{\exercise}[1]{\underline{\exercisetext \arabic{chapter}.\arabic{exercise}:} #1 \stepcounter{exercise}}
+\newcommand{\cchapter}[1]{\chapter{#1} \setcounter{example}{1} \setcounter{exercise}{1}}
+\ifthenelse{\boolean{english}}{\newcommand{\solution}{\textit{solution:} }}{\newcommand{\solution}{\textit{L\"osung:} }}
+%\newcounter{beispiel}
+%\setcounter{beispiel}{1}		% Nummer des ersten Beispiels
+\newboolean{student}
+\newcounter{enumcount}
+\newcommand{\resume}[1]{\begin{#1} \setcounter{enumi}{\value{enumcount}}}
+\newcommand{\pause}[1]{\setcounter{enumcount}{\value{enumi}} \end{#1}}
+
+%Matlab code schreiben
+
+\usepackage{listings}
+\usepackage{color}
+\usepackage{microtype}
+
+\definecolor{green}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mauve}{RGB}{170,55,241}
+\definecolor{lightgray}{RGB}{230,230,230}
+\definecolor{gray}{RGB}{160,160,160}
+\definecolor{dkgray}{RGB}{105,105,105}
+
+\lstset{ %
+  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
+  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
+  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
+  breaklines=true,                 % sets automatic line breaking
+  captionpos=t,                    % sets the caption-position to bottom
+  commentstyle=\color{green},    % comment style
+  deletekeywords={...},            % if you want to delete keywords from the given language
+  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
+  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
+  frame=single,                    % adds a frame around the code
+  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
+  keywordstyle=\color{blue},       % keyword style
+  xleftmargin=11pt,          % linker Abstand vom Rand (framesep+framrule)
+  xrightmargin=5pt,
+  language=Octave,                 % the language of the code
+  morekeywords={*,...},            % if you want to add more keywords to the set
+  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
+  numbersep=6pt,                   % how far the line-numbers are from the code
+  numberstyle=\tiny\color{dkgray}, % the style that is used for the line-numbers
+  rulecolor=\color{gray},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
+  showstringspaces=false,          % underline spaces within strings only
+  showtabs=false,                  % show tabs within strings adding particular underscores
+  stepnumber=2,                    % the step between two line-numbers. If it's 1, each line will be numbered
+  stringstyle=\color{mauve},     % string literal style
+  tabsize=2,                       % sets default tabsize to 2 spaces
+  title=\lstname                   % show the filename of files included with \lstinputlisting; also try caption instead of title
+}
+
+%% Package für Code-listings (Syntayhighlight)
+\usepackage{listings}
+%% erweiterte Bildunterschriften
+\usepackage{caption}
+\usepackage{subcaption}
+
+%% Counter für die römische Nummerierung
+\newcounter{romancount}
+
+% Einheit nicht kursiv schreieben \SI{5}{kg} \si{kg}
+\usepackage{siunitx}
+%% Kapitelnummer in Formel-, Abbildungs- und Tabellennummerierung integrieren
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+
+%Abstand zwischen Überschrift und Tabelle
+\setlength\belowcaptionskip{10pt}
+\usepackage{bm}
+\renewcommand{\arraystretch}{1.5}	
+%Zeilenabstand 1.5-fache
+\usepackage{setspace}
+\onehalfspacing
+
+
+\usepackage{multirow}
+\usepackage{bigdelim}
+\usepackage{pdfpages} 
